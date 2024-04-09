@@ -1,24 +1,107 @@
 
 
+.navigationbar2 a {
+  padding: 16px;
+  font-size: 35px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+}
+
+.navigationbar2 {
+  background-color: gray;
+  overflow: hidden;
+  display: flex;
+
+  align-items: center;
+}
+
+.navigationbar2 a:hover {
+  background-color: black;
+}
+
+.navigationbar2 .active {
+  background-color: black; /* Darker background color for active tab */
+}
+.navigationbar {
+  background-color: black;
+  overflow: hidden;
+}
+
+.logo {
+  width: 125px;
+  margin-right: 50px;
+}
+
+
+
+.navigationbar a {
+  float: right;
+  padding: 15px 15px;
+  font-size: 17px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navigationbar2 .searchbar {
+  display: flex;
+  justify-content: flex-end;
+  float: left;
+  margin-left: 600px;
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  border: 1px black;
+}
+
+.navigationbar2 input[type=text] {
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 17px;
+ 
+}
+
+.navigationbar2 .searchbar button {
+  margin-left: 10px;
+  padding: 15px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.navigationbar2 .searchbar button:hover {
+  background: white;
+}
+
+.navigationbar2 .searchbar img {
+  width: 20px;
+  height: 20px;
+}
+
 h1 {
   font-size: 40px;
-  font-family: Arial
+  font-family: Arial, sans-serif
 }
 h2 {
   font-size: 25px;
-  font-family: Arial
+  font-family: Arial, sans-serif
 }
 h3 {
-  font-family: Arial
+  font-family: Arial, sans-serif
 }
 p {
   font-size: 14px;
-  font-family: Arial
+  font-family: Arial, sans-serif
 }
 
 div {
-background-color: darkcyan;
-text-allign: right;
+background-color: gray;
+text-align: right;
 }
 
 th, td {
