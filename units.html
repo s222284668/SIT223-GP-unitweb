@@ -3,27 +3,49 @@
 <head>
 <title> Units </title>
 <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
-<div class="navigationbar">
-	<a href="#news">News</a>
-	<a href="#Student Portal">Studentportal</a>
-	<a href="#Staff Portal">Staffportal</a>
-</div>
+<script>
+    function searchAndRedirect() {
+        var converter = document.getElementById("searchInput").value.trim().toLowerCase();
+        
+        var pageMap = {
+            "news": "news.html",
+            "student": "student.html",
+            "staff": "staff.html",
+            "home": "home.html",
+            "programs": "programs.html",
+            "courses": "courses.html",
+            "units": "units.html"
+        };
+        
+        if (searchInput in pageMap) {
+            window.location.href = pageMap[searchInput];
+        } else {
+            alert("Invalid tab name, please enter a valid tab from the navigation tabs on this page. e.g. units");
+        }
+    }
+</script>
 </head>
 
-<div class="navigationbar2">
-	<img src="logo.svg" alt="Deakin" class="logo">
-    <a href="home.html">home</a>
-	<a href="programs.html">programs</a>
-	<a href="courses.html">courses</a>
-    <a class="active" href="units.html">units</a>
-	<div class="searchbar">
-		<form action="search" method="get">
-			<input type="text" placeholder="Search.." name="searchbar">
-			<button type="submit"><img src="searchicon.svg" alt="Searchbar" class="img">
-			</button>
-		</form>
-	</div>
+<div class="navigationbar">
+    <a href="news.html">News</a>
+    <a href="student.html">Studentportal</a>
+    <a href="staff.html">Staffportal</a>
 </div>
+
+<div class="navigationbar2">
+    <img src="logo.svg" alt="Deakin" class="logo">
+    <a href="home.html">home</a>
+    <a href="programs.html">programs</a>
+	<a href="courses.html">courses</a>
+	<a class="active" href="units.html">units</a>
+    <div class="searchbar">
+        <form onsubmit="searchAndRedirect(); return false;">
+            <input type="text" placeholder="Search.." id="searchInput">
+            <button type="submit"><img src="searchicon.svg" alt="Searchbar" class="img"></button>
+        </form>
+    </div>
+</div>
+
 <body>
 </body>
 </html>

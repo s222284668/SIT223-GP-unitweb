@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> News </title>
+<link rel="stylesheet" type="text/css" media="screen" href="newsapp.css"/>
+<div class="navigationbar">
+    <a class="active" href="news.html">News</a>
+	<a href="student.html">Studentportal</a>
+	<a href="staff.html">Staffportal</a>
+    <a href="home.html">Home</a>
+</div>
+</head>
+<script>
+    const apiKey = 'e2fecd2c89273c21e3db7212aa017d2f';
+    
+    const apiUrl = 'https://newsapi.org/v2/everything?q=tesla&from=2024-03-12&sortBy=publishedAt&apiKey=f712c84e0e1c4c3a9be2204968106c74' + apiKey;
+
+    async function fetchNews() {
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            return data.articles;
+        } catch (error) {
+            console.error('Error fetching news:', error);
+            return [];
+        }
+    }
+
+    async function displayNews() {
+        const articles = await fetchNews();
+        const blogContainer = document.querySelector('.blog-container');
+
+        articles.forEach(article => {
+            const blogBox = document.createElement('div');
+            blogBox.classList.add('blog-box');
+
+            const blogImg = document.createElement('div');
+            blogImg.classList.add('blog-img');
+            const img = document.createElement('img');
+            img.src = article.urlToImage ? article.urlToImage : 'https://via.placeholder.com/400x200';
+            img.alt = 'Blog';
+            blogImg.appendChild(img);
+
+            const blogText = document.createElement('div');
+            blogText.classList.add('blog-text');
+
+            const span = document.createElement('span');
+            span.textContent = article.source.name;
+            const a = document.createElement('a');
+            a.href = article.url;
+            a.classList.add('blog-title');
+            a.textContent = article.title;
+            const p = document.createElement('p');
+            p.textContent = article.description;
+            const readMore = document.createElement('a');
+            readMore.href = article.url;
+            readMore.textContent = 'Read More';
+
+            blogText.appendChild(span);
+            blogText.appendChild(a);
+            blogText.appendChild(p);
+            blogText.appendChild(readMore);
+
+            blogBox.appendChild(blogImg);
+            blogBox.appendChild(blogText);
+
+            blogContainer.appendChild(blogBox);
+        });
+    }
+
+    displayNews();
+</script>
+
+<body>
+
+    <section id = "blog">
+        <div class="blog-heading">
+            <span>My Recent Posts</span>
+            <h3>My Blog</h3>
+        </div>
+
+    </section>
+
+    <div class="blog-container">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src = "https://via.placeholder.com/400x200" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> Blog heading</span>
+                <a href="#" class="blog-title"> Description</a>
+                <p>Loren ipsum sit amet ador dula mula de sept huit nerf vant dix nerf dix huef hies ieww skkdd weqej dqjwdijq wdqejqwije djsaisjdas sadjia</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src = "https://via.placeholder.com/400x200" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> Blog heading</span>
+                <a href="#" class="blog-title"> Description</a>
+                <p>Loren ipsum sit amet ador dula mula de sept huit nerf vant dix nerf dix huef hies ieww skkdd weqej dqjwdijq wdqejqwije djsaisjdas sadjia</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src = "https://via.placeholder.com/400x200" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> Blog heading</span>
+                <a href="#" class="blog-title"> Description</a>
+                <p>Loren ipsum sit amet ador dula mula de sept huit nerf vant dix nerf dix huef hies ieww skkdd weqej dqjwdijq wdqejqwije djsaisjdas sadjia</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src = "https://via.placeholder.com/400x200" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> Blog heading</span>
+                <a href="#" class="blog-title"> Description</a>
+                <p>Loren ipsum sit amet ador dula mula de sept huit nerf vant dix nerf dix huef hies ieww skkdd weqej dqjwdijq wdqejqwije djsaisjdas sadjia</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src = "https://via.placeholder.com/400x200" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> Blog heading</span>
+                <a href="#" class="blog-title"> Description</a>
+                <p>Loren ipsum sit amet ador dula mula de sept huit nerf vant dix nerf dix huef hies ieww skkdd weqej dqjwdijq wdqejqwije djsaisjdas sadjia</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src = "https://via.placeholder.com/400x200" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> Blog heading</span>
+                <a href="#" class="blog-title"> Description</a>
+                <p>Loren ipsum sit amet ador dula mula de sept huit nerf vant dix nerf dix huef hies ieww skkdd weqej dqjwdijq wdqejqwije djsaisjdas sadjia</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    
+        
+    
+</body>
+</html>

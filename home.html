@@ -3,30 +3,50 @@
 <head>
 <title> Home </title>
 <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
-<div class="navigationbar">
-	<a href="#news">News</a>
-	<a href="#Student Portal">Studentportal</a>
-	<a href="#Staff Portal">Staffportal</a>
-</div>
+<script>
+    function searchAndRedirect() {
+        var converter = document.getElementById("searchInput").value.trim().toLowerCase();
+        
+        var pageMap = {
+            "news": "news.html",
+            "student": "student.html",
+            "staff": "staff.html",
+            "home": "home.html",
+            "programs": "programs.html",
+            "courses": "courses.html",
+            "units": "units.html"
+        };
+        
+        if (searchInput in pageMap) {
+            window.location.href = pageMap[searchInput];
+        } else {
+            alert("Invalid tab name, please enter a valid tab from the navigation tabs on this page. e.g. units");
+        }
+    }
+</script>
 </head>
 
-<div class="navigationbar2">
-	<img src="logo.svg" alt="Deakin" class="logo">
-	<a class="active" href="home.html">home</a>
-	<a href="programs.html">programs</a>
-	<a href="courses.html">courses</a>
-	<a href="units.html">units</a>
-	<div class="searchbar">
-		<form action="search" method="get">
-			<input type="text" placeholder="Search.." name="searchbar">
-			<button type="submit"><img src="searchicon.svg" alt="Searchbar" class="img">
-			</button>
-		</form>
-	</div>
+<div class="navigationbar">
+    <a href="news.html">News</a>
+    <a href="student.html">Studentportal</a>
+    <a href="staff.html">Staffportal</a>
 </div>
+
+<div class="navigationbar2">
+    <img src="logo.svg" alt="Deakin" class="logo">
+    <a class="active" href="home.html">home</a>
+    <a href="programs.html">programs</a>
+    <a href="courses.html">courses</a>
+    <a href="units.html">units</a>
+    <div class="searchbar">
+        <form onsubmit="searchAndRedirect(); return false;">
+            <input type="text" placeholder="Search.." id="searchInput">
+            <button type="submit"><img src="searchicon.svg" alt="Searchbar" class="img"></button>
+        </form>
+    </div>
+</div>
+
 <body>
-
-
 
 <h1>SIT223-SIT753 - Professional Practice in IT</h1>
 <h2> Unit details</h2>
@@ -51,25 +71,27 @@
 </table>
 
 <table style="width:100%">
-	<tr>
-	<td>Year: </td>
-	<td>2023 unit information</td>
-	</tr>
-	<tr>
-	<td>Enrolment modes:</td>
-	<td>Trimester 2: Burwood (Melbourne), Cloud (online)</td>
-	</tr>
-	<tr>
-	<td>Credit point(s):</td>
-	<td>1</td>
-	</tr>
-	<tr>
-	<td> Unit Chair:</td>
-	<td> Trimester 2: Azadeh Ghari Neiat</td>
-	</tr>
-	<td> Scheduled Learning Activities:</td>
-	<td> 1 x 3 hour active class per week, weekly drop in support.</td>
-   </table>
+    <tr>
+    <td>Year: </td>
+    <td>2023 unit information</td>
+    </tr>
+    <tr>
+    <td>Enrolment modes:</td>
+    <td>Trimester 2: Burwood (Melbourne), Cloud (online)</td>
+    </tr>
+    <tr>
+    <td>Credit point(s):</td>
+    <td>1</td>
+    </tr>
+    <tr>
+    <td> Unit Chair:</td>
+    <td> Trimester 2: Azadeh Ghari Neiat</td>
+    </tr>
+    <tr>
+    <td> Scheduled Learning Activities:</td>
+    <td> 1 x 3 hour active class per week, weekly drop in support.</td>
+   </tr>
+</table>
 <h3> Content</h3>
 <p>
  To be successful IT graduates need to understand the use of industry tools and practices,
