@@ -10,6 +10,11 @@
   border-right: 5px solid transparent;
 }
 
+.student-page{
+  border-top-color: green;
+  border-right-color: green;
+}
+
 .navigationbar2 a {
   padding: 16px;
   font-size: 35px;
