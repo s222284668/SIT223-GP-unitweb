@@ -38,8 +38,8 @@
 
   /* Student Page Image */
   .student_image {
-    width: 100px;
-    margin-right: 50px;
+    width: auto;
+    height: 100px;
   }
   
   
