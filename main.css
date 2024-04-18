@@ -42,11 +42,12 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-    height: 33%;
+    height: 30%;
     width: 90%;
-    bottom: 1;
-    left: 1;
-    right: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   
   
