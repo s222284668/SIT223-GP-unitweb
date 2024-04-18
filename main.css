@@ -38,8 +38,11 @@
 
   /* Student Page Image */
   .student_image {
-    width: 100px;
-    height: 100px;
+    background-image: url(student_image.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: auto;
   }
   
   
