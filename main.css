@@ -37,8 +37,8 @@
   }
 
   /* Student Page Image */
-  .student_image {
-    background-image: url(student_image.svg);
+  .students {
+    background-image: url(students.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
