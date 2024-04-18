@@ -42,7 +42,8 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-    height: 100px;
+    height: 300px;
+    width: auto;
   }
   
   
