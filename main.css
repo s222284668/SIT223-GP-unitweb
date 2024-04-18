@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-    height: auto;
+    height: 20%;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -115,7 +115,7 @@
   }
   
   div {
-  background-color: darkcyan;
+  background-color: black;
   text-align: right;
   }
   
