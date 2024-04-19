@@ -49,6 +49,20 @@
     left: 0;
     right: 0;
   }
+
+    /* Staff Page Image */
+    .teachers {
+        background-image: url(teachers.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-attachment: fixed;
+        height: 30%;
+        width: 65%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
   
   
   
@@ -115,7 +129,7 @@
   }
   
   div {
-  background-color: black;
+  background-color: grey;
   text-align: right;
   }
   
