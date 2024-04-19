@@ -36,20 +36,6 @@
     margin-right: 50px;
   }
 
-  .badge {
-    background-image: url(logo.svg);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-attachment: fixed;
-    background-color: white;
-    height: 250px;
-    width: 250px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 40%;
-  }
-
   /* Student Page Image */
   .students {
     background-image: url(students.jpg);
