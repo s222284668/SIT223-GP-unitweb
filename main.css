@@ -38,10 +38,10 @@
 
   .badge {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 75px;
-    height: 75px;
+    bottom: 0;
+    right: 0;
+    width: 125px;
+    height: 125px;
   }
 
   /* Student Page Image */
