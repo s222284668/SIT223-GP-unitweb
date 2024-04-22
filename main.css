@@ -36,6 +36,12 @@
     margin-right: 50px;
   }
 
+  .badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   /* Student Page Image */
   .students {
     background-image: url(students.jpg);
