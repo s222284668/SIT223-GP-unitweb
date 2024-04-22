@@ -38,8 +38,8 @@
 
   .badge {
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    bottom: 2.5%;
+    right: 2.5%;
     width: 200px;
     height: 200px;
   }
